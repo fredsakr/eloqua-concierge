@@ -11,7 +11,7 @@ namespace Concierge.Controllers
 
         public ActionResult Index()
         {
-            var c = Request.QueryString;
+            var c = Request.Params;
             SqlConnection myConnection = DataAccess.GetConnection();
 
             try
