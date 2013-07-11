@@ -1,5 +1,7 @@
-﻿using System.Web.Mvc;
+﻿using System.Collections.Generic;
+using System.Web.Mvc;
 using Concierge.Infrastructure;
+using Postal;
 
 namespace Concierge.Controllers
 {
@@ -26,13 +28,26 @@ namespace Concierge.Controllers
                 subject = Request.Params["subject"];
             }
 
-            var email = EmailHelper.GetEmailFromSubject(subject);
+            var emailAddress= EmailHelper.GetEmailFromSubject(subject);
 
-            var contact = ContactProvider.PopulateDetails(email, Request.Cookies);
+            var contact = ContactProvider.PopulateDetails(emailAddress, Request.Cookies);
 
             // send email
+            dynamic email = new Email("Profile");
+            email.FirstName = contact.FirstName;
+            email.LastName = contact.LastName;
+            email.To = fromName;
+            email.From = fromName;
+            email.ReplySubject = "Profile for:" + email.FirstName + " " + email.LastName;
+            email.Subject = "As you requested Sir: " + email.FirstName + " " + email.LastName + "'s Profile";
+            email.ProfileScore = 4;
+            email.EngagementScore = 3;
+            email.Title = contact.Title;
+            email.Company = contact.Company;
+            email.ContactEmail = contact.EmailAddress;
 
-            return View();
+            email.Send();
+            return View("Sent", email);
         }
     }
 }
