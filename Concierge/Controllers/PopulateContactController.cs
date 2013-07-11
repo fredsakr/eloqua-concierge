@@ -1,8 +1,13 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
+using System.IO;
+using System.Runtime.Serialization.Json;
+using System.Text.RegularExpressions;
 using System.Web.Mvc;
 using Concierge.Infrastructure;
+using Concierge.Models;
+using DotNetOpenAuth.OpenId.Extensions.AttributeExchange;
 
 namespace Concierge.Controllers
 {
@@ -18,25 +23,23 @@ namespace Concierge.Controllers
                 SqlCommand myCommand = new SqlCommand("SELECT TOP 1 * FROM Request ORDER BY 1 DESC", myConnection);
                 SqlDataReader queryCommandReader = myCommand.ExecuteReader();
 
-                // Create a DataTable object to hold all the data returned by the query.
                 DataTable dataTable = new DataTable();
 
-                // Use the DataTable.Load(SqlDataReader) function to put the results of the query into a DataTable.
                 dataTable.Load(queryCommandReader);
 
-                var email = dataTable.Rows[0]["FromName"];
+                var subject = dataTable.Rows[0]["Subject"];
+                var email = EmailHelper.GetEmailFromSubject(subject.ToString());
 
-                var contact = ContactProvider.PopulateDetails(email.ToString(), Request.Cookies);
+                var contact = ContactProvider.PopulateDetails(email, Request.Cookies);
+                var json = Infrastructure.JsonSerializer<Contact>.DeSerialize(contact);
 
-                myCommand = new SqlCommand("UPDATE Request SET IsComplete = 1", myConnection);
+                myCommand = new SqlCommand(string.Format("UPDATE Request SET IsComplete = 1", myConnection);
                 myCommand.ExecuteNonQuery();
             }
             finally
             {
-                // Close the connection
                 myConnection.Close();
             }
-
 
             return View();
         }
