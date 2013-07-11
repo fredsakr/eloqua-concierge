@@ -6,10 +6,7 @@ namespace Concierge.Controllers
 {
     public class ConciergeRequestController : Controller
     {
-        //
-        // GET: /ConciergeRequest/
-
-        [HttpPost]
+        [HttpPost, ValidateInput(false)]
         public ActionResult Index()
         {
             var c = Request.Params;
@@ -49,14 +46,5 @@ namespace Concierge.Controllers
 
             return View();
         }
-
-        //
-        // GET: /ConciergeRequest/Details/5
-
-        public ActionResult Details(int id)
-        {
-            return View();
-        }
-
     }
 }
