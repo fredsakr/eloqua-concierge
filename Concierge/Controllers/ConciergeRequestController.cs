@@ -14,10 +14,29 @@ namespace Concierge.Controllers
             var c = Request.Params;
             SqlConnection myConnection = DataAccess.GetConnection();
 
+            string fromAddress = string.Empty;
+            string fromName = string.Empty;
+            string subject = string.Empty;
+
+            if (!string.IsNullOrEmpty(Request.Params["From"]))
+            {
+                fromAddress = Request.Params["From"];
+            }
+
+            if (!string.IsNullOrEmpty(Request.Params["Subject"]))
+            {
+                subject = Request.Params["Subject"];
+            }
+
+            if (!string.IsNullOrEmpty(Request.Params["From"]))
+            {
+                fromName = Request.Params["From"];
+            }
+
             try
             {
                 myConnection.Open();
-                SqlCommand myCommand = new SqlCommand("INSERT INTO Request (RequestId, FromAddress, FromName, Subject) VALUES (1, 'fred.sakr@oracle.com', 'Fred Sakr', '" + c + "')", myConnection);
+                SqlCommand myCommand = new SqlCommand(string.Format("INSERT INTO Request (RequestId, FromAddress, FromName, Subject) VALUES (1, '{0}', '{1}', '{2}')", fromAddress, fromName, subject), myConnection);
                 myCommand.ExecuteNonQuery();
 
             }
