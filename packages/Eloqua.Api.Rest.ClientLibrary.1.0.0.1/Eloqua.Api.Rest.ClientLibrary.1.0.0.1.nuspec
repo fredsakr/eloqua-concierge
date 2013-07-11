@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Eloqua.Api.Rest.ClientLibrary</id>
+    <version>1.0.0.1</version>
+    <title>EloquaClient</title>
+    <authors>Fred Sakr</authors>
+    <owners>Fred Sakr</owners>
+    <licenseUrl>https://github.com/fredsakr/eloqua-csharp-rest-client/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/fredsakr/eloqua-csharp-rest-client</projectUrl>
+    <iconUrl>https://nuget.org/Content/Images/packageDefaultIcon-50x50.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Eloqua REST API Client</description>
+    <releaseNotes>Initial package import.</releaseNotes>
+    <copyright>Copyright 2013</copyright>
+    <language />
+    <tags>Eloqua Rest Client API</tags>
+    <dependencies>
+      <dependency id="RestSharp" version="104.1" />
+    </dependencies>
+  </metadata>
+</package>

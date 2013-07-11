@@ -27,6 +27,11 @@ namespace Concierge.Controllers
                 subject = Request.Params["subject"];
             }
 
+            if (!string.IsNullOrEmpty(Request.Params["subject"]))
+            {
+                subject = Request.Params["subject"];
+            }
+
             try
             {
                 myConnection.Open();
