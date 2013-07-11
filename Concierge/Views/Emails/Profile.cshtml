@@ -66,7 +66,7 @@ Subject: @Model.Subject
                                     <img src="~/images/star-s.png" />
                                                       }
                                 </h4>
-                                <a class="btn">See full profile</a>
+                                <a class="soc-btn gp">See full profile</a>
                             </td>
                         </tr>
                     </table>
@@ -79,13 +79,14 @@ Subject: @Model.Subject
                     <table bgcolor="">
                         <tr>
                             <td>
-                                <h4>Recent Eloqua Activities <a href="/activities/@Model.EloquaUserID"><small><i>See all activities</i></small></a></h4>
+                                <h4>Recent Eloqua Activities</h4>
                                 <ul>
                                     @foreach (dynamic activity in Model.Activities)
                                     {
                                         <li class="@activity.ActivityType.ToString()">@activity.ActivityType.ToString() <i><small>@activity.TimeStamp</small></i></li>        
                                     }
                                 </ul>
+                                <a href="/activities/@Model.EloquaUserID" class="soc-btn gp">See all activities</a>
                             </td>
                         </tr>
                     </table>
@@ -97,13 +98,14 @@ Subject: @Model.Subject
                     <table bgcolor="">
                         <tr>
                             <td>
-                                <h4>Recent External Activities <a href="/activities/@Model.EloquaUserID"><small><i>See all external activities</i></small></a></h4>
+                                <h4>Recent External Activities</h4>
                                 <ul>
                                     @foreach (dynamic activity in Model.Activities)
                                     {
                                         <li class="@activity.ActivityType.ToString()">@activity.ActivityType.ToString() <i><small>@activity.TimeStamp</small></i></li>        
                                     }
                                 </ul>
+                                <a href="/activities/@Model.EloquaUserID" class="btn">See all activities</a>
                             </td>
                         </tr>
                     </table>
@@ -219,3 +221,5 @@ Subject: @Model.Subject
 
 </body>
 </html>
+
+

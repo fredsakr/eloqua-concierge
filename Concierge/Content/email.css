@@ -224,21 +224,21 @@ ul.sidebar li a h1,ul.sidebar li a h2,ul.sidebar li a h3,ul.sidebar li a h4,ul.s
 }
 
 /* Eloqua Custom Rules */
-.form {
+.formSubmit {
     list-style-type: none; 
     background: url('/images/form-s.png') no-repeat;
     padding-left:32px;
     height: 32px;
 }
 
-.website {
+.webVisit {
     list-style-type: none; 
     background: url('/images/website-s.png') no-repeat;
     padding-left:32px;
     height: 32px;
 }
 
-.email {
+.emailOpen {
     list-style-type: none; 
     background: url('/images/email-s.png') no-repeat;
     padding-left:32px;

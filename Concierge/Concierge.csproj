@@ -46,7 +46,7 @@
   <ItemGroup>
     <Reference Include="Eloqua.Api.Rest.ClientLibrary">
       <HintPath>..\packages\Eloqua.Api.Rest.ClientLibrary.1.0.0.1\lib\net45\Eloqua.Api.Rest.ClientLibrary.dll</HintPath>
-	</Reference>
+    </Reference>
     <Reference Include="EntityFramework">
       <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -356,11 +356,11 @@
     <Content Include="Views\ConciergeRequest\Details.cshtml" />
     <Content Include="Views\PopulateContact\Index.cshtml" />
     <Content Include="Views\Concierge\Index.cshtml" />
-    <Content Include="Views\Email\Profile.cshtml" />
     <Content Include="Views\Emails\Profile.cshtml" />
     <Content Include="Views\Email\Sent.cshtml" />
     <Content Include="Views\Emails\_ViewStart.cshtml" />
     <Content Include="Views\Email\ProfileHtml.cshtml" />
+    <Content Include="Views\Email\TestEmail.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
