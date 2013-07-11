@@ -9,6 +9,7 @@ namespace Concierge.Controllers
         //
         // GET: /ConciergeRequest/
 
+        [HttpPost]
         public ActionResult Index()
         {
             var c = Request.Params;
