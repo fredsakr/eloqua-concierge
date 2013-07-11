@@ -4,13 +4,19 @@
     ViewBag.Title = "title";
     Layout = null;
 }
+To: @Model.To
+From: @Model.From
+Subject: @Model.Subject
+
+@* NOTE: There MUST be a blank line after the headers and before the content. *@
+
 <html>
 <head>
     <!-- If you delete this meta tag, the ground will open and swallow you. -->
     <meta name="viewport" content="width=device-width" />
 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>@ViewBag.Subject</title>
+    <title>@Model.Subject</title>
 
     <link rel="stylesheet" type="text/css" href="/Content/email.css">
 </head>
@@ -50,18 +56,18 @@
                     <table bgcolor="">
                         <tr>
                             <td>
-                                <h1>@ViewBag.FirstName @ViewBag.LastName</h1>
-                                <h4>Title: @ViewBag.Title</h4>
-                                <h4>Company: @ViewBag.Company</h4>
-                                <h4>Email: @ViewBag.ContactEmail</h4>
-                                <h4>Phone Number: @ViewBag.PhoneNumber</h4>
-                                <h4>Address: @ViewBag.Address</h4>
-                                <h4>Profile Score: @for (int i = 0; i < @ViewBag.ProfileScore; i++)
+                                <h1>@Model.FirstName @Model.LastName</h1>
+                                <h4>Title: @Model.Title</h4>
+                                <h4>Company: @Model.Company</h4>
+                                <h4>Email: @Model.ContactEmail</h4>
+                                <h4>Phone Number: @Model.Phone</h4>
+                                <h4>Address: @Model.Address</h4>
+                                <h4>Profile Score: @for (int i = 0; i < @Model.ProfileScore; i++)
                                                    {
                                     <img src="/images/fire-s.png" />
                                                    }
                                 </h4>
-                                <h4>Engagement Score: @for (int i = 0; i < @ViewBag.EngagementScore; i++)
+                                <h4>Engagement Score: @for (int i = 0; i < @Model.EngagementScore; i++)
                                                       {
                                     <img src="~/images/star-s.png" />
                                                       }
@@ -79,13 +85,14 @@
                     <table bgcolor="">
                         <tr>
                             <td>
-                                <h4>Recent Eloqua Activities <a href="/activities/@ViewBag.EloquaUserID"><small><i>See all activities</i></small></a></h4>
+                                <h4>Recent Eloqua Activities</h4>
                                 <ul>
                                     @foreach (dynamic activity in Model.Activities)
                                     {
                                         <li class="@activity.ActivityType.ToString()">@activity.ActivityType.ToString() <i><small>@activity.TimeStamp</small></i></li>        
                                     }
                                 </ul>
+                                <a href="/activities/eloqua/@Model.EloquaUserID" class="btn">See all activities</a>
                             </td>
                         </tr>
                     </table>
@@ -97,13 +104,14 @@
                     <table bgcolor="">
                         <tr>
                             <td>
-                                <h4>Recent External Activities <a href="/activities/@ViewBag.EloquaUserID"><small><i>See all external activities</i></small></a></h4>
+                                <h4>Recent External Activities</h4>
                                 <ul>
                                     @foreach (dynamic activity in Model.Activities)
                                     {
                                         <li class="@activity.ActivityType.ToString()">@activity.ActivityType.ToString() <i><small>@activity.TimeStamp</small></i></li>        
                                     }
                                 </ul>
+                                <a href="/activities/external/@Model.EloquaUserID" class="btn">See all activities</a>
                             </td>
                         </tr>
                     </table>
@@ -219,3 +227,5 @@
 
 </body>
 </html>
+
+

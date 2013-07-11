@@ -360,7 +360,7 @@
     <Content Include="Views\Email\Sent.cshtml" />
     <Content Include="Views\Emails\_ViewStart.cshtml" />
     <Content Include="Views\Email\ProfileHtml.cshtml" />
-    <Content Include="Views\Email\TestEmail.cshtml" />
+    <Content Include="Views\Emails\TestEmail.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

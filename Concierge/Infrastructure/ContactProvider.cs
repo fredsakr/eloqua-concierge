@@ -14,7 +14,6 @@ namespace Concierge.Infrastructure
             var creds = CookieHelper.GetCredentialsFromCookie(cookies);
 
             var client = new Eloqua.Api.Rest.ClientLibrary.Client(creds.Domain, creds.UserName, creds.Password, "https://secure.eloqua.com/API/REST/2.0");
-
             try
             {
                 var response = client.Data.Contact.Get(emailAddress, 1, 1);
@@ -27,13 +26,22 @@ namespace Concierge.Infrastructure
                 contact.Company = data.accountName;
 
                 var emailOpens = ActivityHelper.GetActivities(data.id, client, ActivityType.emailOpen);
-                contact.Activities.AddRange(emailOpens);
+                if (emailOpens.Count > 0)
+                {
+                    contact.Activities.AddRange(emailOpens);    
+                }
 
                 var webVisits = ActivityHelper.GetActivities(data.id, client, ActivityType.webVisit);
-                contact.Activities.AddRange(webVisits);
+                if (webVisits.Count > 0)
+                {
+                    contact.Activities.AddRange(webVisits);    
+                }
 
                 var formSubmissions = ActivityHelper.GetActivities(data.id, client, ActivityType.formSubmit);
-                contact.Activities.AddRange(formSubmissions);
+                if (formSubmissions.Count > 0)
+                {
+                    contact.Activities.AddRange(formSubmissions);    
+                }
 
             }
             catch (Exception ex)
