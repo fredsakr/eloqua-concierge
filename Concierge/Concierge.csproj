@@ -48,8 +48,16 @@
       <HintPath>..\packages\Eloqua.Api.Rest.ClientLibrary.1.0.0.1\lib\net45\Eloqua.Api.Rest.ClientLibrary.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+<<<<<<< HEAD
     <Reference Include="RestSharp">
       <HintPath>..\packages\RestSharp.104.1\lib\net4\RestSharp.dll</HintPath>
+=======
+    <Reference Include="Postal">
+      <HintPath>..\packages\postal.0.8.2\lib\net40\Postal.dll</HintPath>
+    </Reference>
+    <Reference Include="RazorEngine">
+      <HintPath>..\packages\RazorEngine.3.2.0\lib\net40\RazorEngine.dll</HintPath>
+>>>>>>> Re-adding Postal dlls
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -61,6 +69,17 @@
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+<<<<<<< HEAD
+=======
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.30506.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+>>>>>>> Re-adding Postal dlls
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Abstractions" />
@@ -111,10 +130,6 @@
     </Reference>
     <Reference Include="System.Web.Optimization">
       <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.0.0\lib\net40\System.Web.Optimization.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20715.0\lib\net40\System.Web.Razor.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
@@ -199,6 +214,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ConciergeController.cs" />
     <Compile Include="Controllers\ConciergeRequestController.cs" />
+    <Compile Include="Controllers\EmailController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PopulateContactController.cs" />
     <Compile Include="Controllers\SampleController.cs" />
@@ -339,8 +355,13 @@
     <Content Include="Views\Sample\Index.cshtml" />
     <Content Include="Views\ConciergeRequest\Index.cshtml" />
     <Content Include="Views\ConciergeRequest\Details.cshtml" />
+<<<<<<< HEAD
     <Content Include="Views\PopulateContact\Index.cshtml" />
     <Content Include="Views\Concierge\Index.cshtml" />
+=======
+    <Content Include="Views\Email\Profile.cshtml" />
+    <Content Include="Views\Emails\_ViewStart.cshtml" />
+>>>>>>> Re-adding Postal dlls
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
