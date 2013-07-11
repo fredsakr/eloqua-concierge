@@ -19,14 +19,14 @@ namespace Concierge.Controllers
             string fromName = string.Empty;
             string subject = string.Empty;
 
-            if (!string.IsNullOrEmpty(Request.Params["From"]))
+            if (!string.IsNullOrEmpty(Request.Params["envelope"]))
             {
-                fromAddress = Request.Params["From"];
+                fromAddress = Request.Params["envelope"];
             }
 
-            if (!string.IsNullOrEmpty(Request.Params["Subject"]))
+            if (!string.IsNullOrEmpty(Request.Params["headers"]))
             {
-                subject = Request.Params["Subject"];
+                subject = Request.Params["headers"];
             }
 
             if (!string.IsNullOrEmpty(Request.Params["From"]))
