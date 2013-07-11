@@ -18,7 +18,16 @@ namespace Concierge.Models
 
     }
 
-   public class RegisterExternalLoginModel
+    [Table("UserProfile")]
+    public class UserProfile
+    {
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int UserId { get; set; }
+        public string UserName { get; set; }
+    }
+
+    public class RegisterExternalLoginModel
     {
         [Required]
         [Display(Name = "User name")]
@@ -42,6 +51,7 @@ namespace Concierge.Models
 
         [DataType(DataType.Password)]
         [Display(Name = "Confirm new password")]
+        [System.ComponentModel.DataAnnotations.Compare("NewPassword", ErrorMessage = "The new password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
     }
 
@@ -74,6 +84,7 @@ namespace Concierge.Models
 
         [DataType(DataType.Password)]
         [Display(Name = "Confirm password")]
+        [System.ComponentModel.DataAnnotations.Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
     }
 

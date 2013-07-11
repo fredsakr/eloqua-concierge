@@ -14,6 +14,8 @@ C:\Development\Eloqua\Concierge\eloqua-concierge\Concierge\bin\Microsoft.Web.Inf
 C:\Development\Eloqua\Concierge\eloqua-concierge\Concierge\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
 C:\Development\Eloqua\Concierge\eloqua-concierge\Concierge\bin\Microsoft.Web.WebPages.OAuth.dll
 C:\Development\Eloqua\Concierge\eloqua-concierge\Concierge\bin\Newtonsoft.Json.dll
+C:\Development\Eloqua\Concierge\eloqua-concierge\Concierge\bin\Postal.dll
+C:\Development\Eloqua\Concierge\eloqua-concierge\Concierge\bin\RazorEngine.dll
 C:\Development\Eloqua\Concierge\eloqua-concierge\Concierge\bin\System.Net.Http.dll
 C:\Development\Eloqua\Concierge\eloqua-concierge\Concierge\bin\System.Net.Http.Formatting.dll
 C:\Development\Eloqua\Concierge\eloqua-concierge\Concierge\bin\System.Net.Http.WebRequest.dll
@@ -32,6 +34,9 @@ C:\Development\Eloqua\Concierge\eloqua-concierge\Concierge\bin\WebGrease.dll
 C:\Development\Eloqua\Concierge\eloqua-concierge\Concierge\bin\WebMatrix.Data.dll
 C:\Development\Eloqua\Concierge\eloqua-concierge\Concierge\bin\WebMatrix.WebData.dll
 C:\Development\Eloqua\Concierge\eloqua-concierge\Concierge\bin\EntityFramework.xml
+C:\Development\Eloqua\Concierge\eloqua-concierge\Concierge\bin\RazorEngine.pdb
+C:\Development\Eloqua\Concierge\eloqua-concierge\Concierge\bin\RazorEngine.xml
+C:\Development\Eloqua\Concierge\eloqua-concierge\Concierge\bin\System.Web.Razor.xml
 C:\Development\Eloqua\Concierge\eloqua-concierge\Concierge\bin\Newtonsoft.Json.xml
 C:\Development\Eloqua\Concierge\eloqua-concierge\Concierge\bin\System.Net.Http.xml
 C:\Development\Eloqua\Concierge\eloqua-concierge\Concierge\bin\System.Net.Http.Formatting.xml
@@ -40,7 +45,6 @@ C:\Development\Eloqua\Concierge\eloqua-concierge\Concierge\bin\System.Web.Helper
 C:\Development\Eloqua\Concierge\eloqua-concierge\Concierge\bin\System.Web.Http.xml
 C:\Development\Eloqua\Concierge\eloqua-concierge\Concierge\bin\System.Web.Http.WebHost.xml
 C:\Development\Eloqua\Concierge\eloqua-concierge\Concierge\bin\System.Web.Mvc.xml
-C:\Development\Eloqua\Concierge\eloqua-concierge\Concierge\bin\System.Web.Razor.xml
 C:\Development\Eloqua\Concierge\eloqua-concierge\Concierge\bin\System.Web.WebPages.xml
 C:\Development\Eloqua\Concierge\eloqua-concierge\Concierge\bin\System.Web.WebPages.Deployment.xml
 C:\Development\Eloqua\Concierge\eloqua-concierge\Concierge\bin\System.Web.WebPages.Razor.xml
@@ -87,7 +91,6 @@ C:\Development\Eloqua\Concierge\eloqua-concierge\Concierge\bin\zh-Hant\System.Sp
 C:\Development\Eloqua\Concierge\eloqua-concierge\Concierge\obj\Debug\Concierge.csprojResolveAssemblyReference.cache
 C:\Development\Eloqua\Concierge\eloqua-concierge\Concierge\obj\Debug\Concierge.dll
 C:\Development\Eloqua\Concierge\eloqua-concierge\Concierge\obj\Debug\Concierge.pdb
-C:\Development\Eloqua\Concierge\eloqua-concierge\Concierge\bin\Postal.dll
-C:\Development\Eloqua\Concierge\eloqua-concierge\Concierge\bin\RazorEngine.dll
-C:\Development\Eloqua\Concierge\eloqua-concierge\Concierge\bin\RazorEngine.pdb
-C:\Development\Eloqua\Concierge\eloqua-concierge\Concierge\bin\RazorEngine.xml
+C:\Development\Eloqua\Concierge\eloqua-concierge\Concierge\bin\Eloqua.Api.Rest.ClientLibrary.dll
+C:\Development\Eloqua\Concierge\eloqua-concierge\Concierge\bin\RestSharp.dll
+C:\Development\Eloqua\Concierge\eloqua-concierge\Concierge\bin\RestSharp.xml
