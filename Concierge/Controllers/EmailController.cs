@@ -36,7 +36,7 @@ namespace Concierge.Controllers
             email.EngagementScore = 3;
             email.Title = "Master of the House";
             email.Company = "Oracle";
-            email.PhoneNumber = "123-456-7890";
+            email.Phone = "123-456-7890";
             email.Address = "123 Oracle Way";
             email.EloquaUserID = "123";
             email.ContactEmail = "donald.ho@oracle.com";

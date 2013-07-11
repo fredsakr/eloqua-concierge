@@ -29,5 +29,21 @@ namespace Concierge.Models
 
         [DataMember]
         public List<Activity> Activities;
+
+        [DataMember]
+        public string ProfileScore;
+
+        [DataMember]
+        public string EngagementScore;
+
+        [DataMember]
+        public string EloquaUserID;
+
+        [DataMember]
+        public string TimeStamp;
+
+        [DataMember]
+        public string ActivityType;
+
     }
 }

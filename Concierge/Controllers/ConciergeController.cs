@@ -41,9 +41,13 @@ namespace Concierge.Controllers
             email.ReplySubject = "Profile for:" + email.FirstName + " " + email.LastName;
             email.Subject = "As you requested Sir: " + email.FirstName + " " + email.LastName + "'s Profile";
             email.ProfileScore = 4;
+            email.Phone = contact.Phone;
+            email.Address = contact.Address;
             email.EngagementScore = 3;
             email.Title = contact.Title;
             email.Company = contact.Company;
+            email.EloquaUserID = "1";
+            email.Activities = "";
             email.ContactEmail = contact.EmailAddress;
 
             email.Send();
