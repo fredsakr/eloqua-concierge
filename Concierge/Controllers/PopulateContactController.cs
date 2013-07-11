@@ -33,7 +33,7 @@ namespace Concierge.Controllers
                 var contact = ContactProvider.PopulateDetails(email, Request.Cookies);
                 var json = Infrastructure.JsonSerializer<Contact>.DeSerialize(contact);
 
-                myCommand = new SqlCommand(string.Format("UPDATE Request SET IsComplete = 1", myConnection);
+                myCommand = new SqlCommand(string.Format("UPDATE Request SET IsComplete = 1"), myConnection);
                 myCommand.ExecuteNonQuery();
             }
             finally

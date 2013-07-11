@@ -1,4 +1,5 @@
-﻿using System.Net;
+﻿using System.Configuration;
+using System.Net;
 using System.Web;
 
 namespace Concierge.Infrastructure
@@ -7,12 +8,11 @@ namespace Concierge.Infrastructure
     {
         public static NetworkCredential GetCredentialsFromCookie(HttpCookieCollection cookies)
         {
-            var cookie = cookies["UserSettings"];
             var creds = new NetworkCredential()
                 {
-                    Domain = cookie["Site"],
-                    UserName = cookie["User"],
-                    Password = cookie["Password"]
+                    Domain = ConfigurationManager.AppSettings["Site"],
+                    UserName = ConfigurationManager.AppSettings["User"],
+                    Password = ConfigurationManager.AppSettings["Password"]
                 };
 
             return creds;

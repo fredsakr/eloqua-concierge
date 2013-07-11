@@ -197,6 +197,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ConciergeController.cs" />
     <Compile Include="Controllers\ConciergeRequestController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PopulateContactController.cs" />
@@ -208,6 +209,7 @@
     <Compile Include="Infrastructure\ActivityHelper.cs" />
     <Compile Include="Infrastructure\ContactProvider.cs" />
     <Compile Include="Infrastructure\CookieHelper.cs" />
+    <Compile Include="Infrastructure\CvpLinks.cs" />
     <Compile Include="Infrastructure\DataAccess.cs" />
     <Compile Include="Infrastructure\EmailHelper.cs" />
     <Compile Include="Infrastructure\JsonSerializer.cs" />
@@ -338,6 +340,7 @@
     <Content Include="Views\ConciergeRequest\Index.cshtml" />
     <Content Include="Views\ConciergeRequest\Details.cshtml" />
     <Content Include="Views\PopulateContact\Index.cshtml" />
+    <Content Include="Views\Concierge\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
