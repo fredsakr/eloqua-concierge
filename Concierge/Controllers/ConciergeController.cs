@@ -58,7 +58,7 @@ namespace Concierge.Controllers
             email.ContactEmail = contact.EmailAddress;
 
             email.Send();
-            return View("Sent", email);
+            return View();
         }
     }
 }
