@@ -1,6 +1,6 @@
-﻿To: @Model.To
-From: @Model.From
-Subject: @Model.Subject
+﻿To: @Html.Raw(Model.To)
+From: @Html.Raw(Model.From)
+Subject: @Html.Raw(Model.Subject)
 
 @* NOTE: There MUST be a blank line after the headers and before the content. *@
 
@@ -45,7 +45,7 @@ Subject: @Model.Subject
     <ul style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.6; margin: 0 0 10px; padding: 0;">
                                     @foreach (dynamic activity in Model.Activities)
                                     {
-                                        <li style="@activity.GetActivityStyle()">@activity.type.ToString() <i><small>@activity.date</small></i></li>        
+                                        <li style="list-style-type: none;">@activity.GetActivityStyle() @activity.type.ToString() <i><small>@activity.date</small></i></li>        
                                     }        
     </ul>
 <a href="http://eloqua-concierge.apphb.com/activities/eloqua/1" class="btn" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; color: #FFF; text-decoration: none; font-weight: bold; text-align: center; cursor: pointer; display: block !important; background-image: none !important; background-color: #666; margin: 0 0 10px; padding: 10px 16px;">See all activities</a>
@@ -62,7 +62,7 @@ Subject: @Model.Subject
     <ul style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.6; margin: 0 0 10px; padding: 0;">
                                     @foreach (dynamic activity in Model.ExternalActivities)
                                     {
-                                        <li style="@activity.GetActivityStyle()">@activity.type.ToString() <i><small>@activity.date</small></i></li>        
+                                        <li style="list-style-type: none;">@activity.GetActivityStyle() @activity.type.ToString() <i><small>@activity.date</small></i></li>        
                                     }             
     </ul>
 <a href="http://eloqua-concierge.apphb.com/activities/external/1" class="btn" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; color: #FFF; text-decoration: none; font-weight: bold; text-align: center; cursor: pointer; display: block !important; background-image: none !important; background-color: #666; margin: 0 0 10px; padding: 10px 16px;">See all activities</a>
@@ -86,12 +86,22 @@ Subject: @Model.Subject
 <td style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; margin: 0; padding: 15px;">
                                                             <h5 class="" style="font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif; line-height: 1.1; color: #000; font-weight: 900; font-size: 17px; margin: 0 0 15px; padding: 0;">Actions:</h5>
                                                             <p class="" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.6; margin: 0 0 10px; padding: 0;">
-                                                                <a href="#" class="soc-btn fb" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; color: #FFF; font-size: 12px; text-decoration: none; font-weight: bold; display: block; text-align: center; background-color: #3B5998 !important; margin: 0 0 10px; padding: 3px 7px;">Subscribe to Notifications</a> 
-                                                                <a href="#" class="soc-btn tw" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; color: #FFF; font-size: 12px; text-decoration: none; font-weight: bold; display: block; text-align: center; background-color: #1daced !important; margin: 0 0 10px; padding: 3px 7px;">Send Contact Engage Email</a> 
-                                                                <a href="#" class="soc-btn gp" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; color: #FFF; font-size: 12px; text-decoration: none; font-weight: bold; display: block; text-align: center; background-color: #DB4A39 !important; margin: 0 0 10px; padding: 3px 7px;">Add Contact to Campaign</a>
-                                                                <a href="#" class="soc-btn fb" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; color: #FFF; font-size: 12px; text-decoration: none; font-weight: bold; display: block; text-align: center; background-color: #3B5998 !important; margin: 0 0 10px; padding: 3px 7px;">Subscribe to Notifications</a> 
-                                                                <a href="#" class="soc-btn tw" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; color: #FFF; font-size: 12px; text-decoration: none; font-weight: bold; display: block; text-align: center; background-color: #1daced !important; margin: 0 0 10px; padding: 3px 7px;">Send Contact Engage Email</a> 
-                                                                <a href="#" class="soc-btn gp" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; color: #FFF; font-size: 12px; text-decoration: none; font-weight: bold; display: block; text-align: center; background-color: #DB4A39 !important; margin: 0 0 10px; padding: 3px 7px;">Add Contact to Campaign</a>
+                                                                <a href="#" class="soc-btn fb" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; color: #FFF; font-size: 12px; text-decoration: none; font-weight: bold; display: block; text-align: center; background-color: #3B5998; margin: 0 0 10px; padding: 3px 7px;"> Subscribe to Notifications </a>
+                                                            </p>
+                                                            <p class="" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.6; margin: 0 0 10px; padding: 0;">
+                                                                <a href="#" class="soc-btn tw" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; color: #FFF; font-size: 12px; text-decoration: none; font-weight: bold; display: block; text-align: center; background-color: #1daced; margin: 0 0 10px; padding: 3px 7px;"> Send Contact Engage Email </a>
+                                                            </p>
+                                                            <p class="" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.6; margin: 0 0 10px; padding: 0;">
+                                                                <a href="#" class="soc-btn gp" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; color: #FFF; font-size: 12px; text-decoration: none; font-weight: bold; display: block; text-align: center; background-color: #DB4A39; margin: 0 0 10px; padding: 3px 7px;"> Add Contact to Campaign </a>
+                                                            </p>
+                                                            <p class="" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.6; margin: 0 0 10px; padding: 0;">
+                                                                <a href="#" class="soc-btn fb" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; color: #FFF; font-size: 12px; text-decoration: none; font-weight: bold; display: block; text-align: center; background-color: #3B5998; margin: 0 0 10px; padding: 3px 7px;"> Subscribe to Notifications </a>
+                                                            </p>
+                                                            <p class="" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.6; margin: 0 0 10px; padding: 0;">
+                                                                <a href="#" class="soc-btn tw" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; color: #FFF; font-size: 12px; text-decoration: none; font-weight: bold; display: block; text-align: center; background-color: #1daced; margin: 0 0 10px; padding: 3px 7px;"> Send Contact Engage Email </a>
+                                                            </p>
+                                                            <p class="" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.6; margin: 0 0 10px; padding: 0;">
+                                                                <a href="#" class="soc-btn gp" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; color: #FFF; font-size: 12px; text-decoration: none; font-weight: bold; display: block; text-align: center; background-color: #DB4A39; margin: 0 0 10px; padding: 3px 7px;"> Add Contact to Campaign </a>
                                                             </p>
                                                         </td>
                                                     </tr></table>

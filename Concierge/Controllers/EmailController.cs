@@ -24,10 +24,10 @@ namespace Concierge.Controllers
             dynamic email = new Email("Profile");
             email.FirstName = "Donald";
             email.LastName = "Ho";
-            email.To = "donald.cw.ho@gmail.com";
+            email.To = "donald.ho@oracle.com";
             email.From = "donald.ho@oracle.com";
-            email.ReplySubject = "Profile for:" + email.FirstName + " " + email.LastName;
-            email.Subject = "As you requested Sir: " + email.FirstName + " " + email.LastName + "'s Profile";
+            email.ReplySubject = "Profile for " + email.FirstName + " " + email.LastName;
+            email.Subject = "As you requested " + email.FirstName + " " + email.LastName + "'s Profile";
             email.ProfileScore = 4;
             email.EngagementScore = 3;
             email.Title = "Master of the House";
@@ -57,8 +57,8 @@ namespace Concierge.Controllers
             email.LastName = contact.LastName;
             email.To = "donald.ho@oracle.com";
             email.From = "donald.ho@oracle.com";
-            email.ReplySubject = "Profile for:" + email.FirstName + " " + email.LastName;
-            email.Subject = "As you requested Sir: " + email.FirstName + " " + email.LastName + "'s Profile";
+            email.ReplySubject = "Profile for " + email.FirstName + " " + email.LastName;
+            email.Subject = "As you requested Sir " + email.FirstName + " " + email.LastName + "'s Profile";
             email.ProfileScore = 4;
             email.Phone = contact.Phone;
             email.Address = contact.Address;
@@ -85,8 +85,8 @@ namespace Concierge.Controllers
             email.LastName = "Ho";
             email.To = "donald.ho@oracle.com";
             email.From = "donald.ho@oracle.com";
-            email.ReplySubject = "Profile for:" + email.FirstName + " " + email.LastName;
-            email.Subject = "As you requested Sir: " + email.FirstName + " " + email.LastName + "'s Profile";
+            email.ReplySubject = "Profile for " + email.FirstName + " " + email.LastName;
+            email.Subject = "As you requested Sir " + email.FirstName + " " + email.LastName + "'s Profile";
             email.ProfileScore = 4;
             email.EngagementScore = 3;
             email.Title = "Master of the House";

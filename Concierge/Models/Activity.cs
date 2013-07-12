@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Web;
 
 namespace Concierge.Models
 {
@@ -8,21 +9,21 @@ namespace Concierge.Models
         public string type;
         public List<Dictionary<string, string>> details;
 
-        public string GetActivityStyle()
+        public HtmlString GetActivityStyle()
         {
             if (type == Eloqua.Api.Rest.ClientLibrary.Models.Data.Activities.ActivityType.emailOpen.ToString())
             {
-                return "list-style-type: none; background: url('http://eloqua-concierge.apphb.com/images/email-s.png') no-repeat; padding-left:32px; height: 32px;";
+                return new HtmlString("<img src='http://eloqua-concierge.apphb.com/images/email-s.png'>");
             }
             else if (type == Eloqua.Api.Rest.ClientLibrary.Models.Data.Activities.ActivityType.formSubmit.ToString())
             {
-                return "list-style-type: none; background: url('http://eloqua-concierge.apphb.com/images/form-s.png') no-repeat; padding-left:32px; height: 32px;";
+                return new HtmlString("<img src='http://eloqua-concierge.apphb.com/images/form-s.png'>");
             }
             else if (type == Eloqua.Api.Rest.ClientLibrary.Models.Data.Activities.ActivityType.webVisit.ToString())
             {
-                return "list-style-type: none; background: url('http://eloqua-concierge.apphb.com/images/website-s.png') no-repeat; padding-left:32px; height: 32px;";
+                return  new HtmlString("<img src='http://eloqua-concierge.apphb.com/images/website-s.png'>");
             }
-            return "list-style-type: none; no-repeat; padding-left:32px; height: 32px;";
+            return  new HtmlString("list-style-type: none; no-repeat; padding-left:32px; height: 32px;");
         }
     }
 }
