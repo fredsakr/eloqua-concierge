@@ -93,4 +93,3 @@ C:\Development\Eloqua\Concierge\eloqua-concierge\Concierge\bin\ru\System.Spatial
 C:\Development\Eloqua\Concierge\eloqua-concierge\Concierge\bin\zh-Hans\System.Spatial.resources.dll
 C:\Development\Eloqua\Concierge\eloqua-concierge\Concierge\bin\zh-Hant\System.Spatial.resources.dll
 C:\Development\Eloqua\Concierge\eloqua-concierge\Concierge\obj\Debug\Concierge.pdb
-C:\Development\Eloqua\Concierge\eloqua-concierge\Concierge\obj\Debug\Concierge.csprojResolveAssemblyReference.cache
