@@ -47,6 +47,7 @@ namespace Concierge.Controllers
             activities.Add(new Activity() { ActivityType = "email", TimeStamp = "01/11/2013 6:15pm" });
             activities.Add(new Activity() { ActivityType = "website", TimeStamp = "01/11/2013 8:15pm" });
             email.Activities = activities;
+            email.ExternalActivities = activities;
             email.Send();
             return View("Sent", email);
         }
@@ -70,7 +71,12 @@ namespace Concierge.Controllers
             email.Title = contact.Title;
             email.Company = contact.Company;
             email.EloquaUserID = "1";
-            email.Activities = "";
+            List<Activity> activities = new List<Activity>();
+            activities.Add(new Activity() { ActivityType = "form", TimeStamp = "01/11/2013 4:15pm" });
+            activities.Add(new Activity() { ActivityType = "email", TimeStamp = "01/11/2013 6:15pm" });
+            activities.Add(new Activity() { ActivityType = "website", TimeStamp = "01/11/2013 8:15pm" });
+            email.Activities = activities;
+            email.ExternalActivities = activities;
             email.ContactEmail = contact.EmailAddress;
 
 //            email.Send();
@@ -100,6 +106,7 @@ namespace Concierge.Controllers
             activities.Add(new Activity() { ActivityType = "email", TimeStamp = "01/11/2013 6:15pm" });
             activities.Add(new Activity() { ActivityType = "website", TimeStamp = "01/11/2013 8:15pm" });
             email.Activities = activities;
+            email.ExternalActivities = activities;
             return View("ProfileHtml", email);
         }
     

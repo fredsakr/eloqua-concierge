@@ -48,6 +48,7 @@ namespace Concierge.Controllers
             email.Company = contact.Company;
             email.EloquaUserID = "1";
             email.Activities = "";
+            email.ExternalActivities = "";
             email.ContactEmail = contact.EmailAddress;
 
             email.Send();
