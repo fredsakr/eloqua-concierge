@@ -8,6 +8,7 @@ namespace Concierge.Controllers
 {
     public class ConciergeController : Controller
     {
+        [HttpPost, ValidateInput(false)]
         public ActionResult Index()
         {
             string fromAddress = string.Empty;
