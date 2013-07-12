@@ -24,7 +24,7 @@ namespace Concierge.Infrastructure
                 Activity activity = new Activity();
                 activity.type = type.ToString();
                 activity.details = item.details;
-                activity.date = item.activityDate;
+                activity.date = item.activityDate.ToString();
                 activities.Add(activity);
             }
             return activities;

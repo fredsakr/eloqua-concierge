@@ -4,16 +4,11 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Concierge.Infrastructure;
+using Concierge.Models;
 using Postal;
 
 namespace Concierge.Controllers
 {
-    public class Activity
-    {
-        public string ActivityType { get; set; }
-        public string TimeStamp { get; set; }
-    }
-
     public class EmailController : Controller
     {
         //
@@ -43,9 +38,9 @@ namespace Concierge.Controllers
             email.ContactEmail = "donald.ho@oracle.com";
 
             List<Activity> activities = new List<Activity>();
-            activities.Add(new Activity() { ActivityType = "form", TimeStamp = "01/11/2013 4:15pm" });
-            activities.Add(new Activity() { ActivityType = "email", TimeStamp = "01/11/2013 6:15pm" });
-            activities.Add(new Activity() { ActivityType = "website", TimeStamp = "01/11/2013 8:15pm" });
+            activities.Add(new Activity() { type = "formSubmit", date = "01/11/2013 4:15pm" });
+            activities.Add(new Activity() { type = "emailOpen", date = "01/11/2013 6:15pm" });
+            activities.Add(new Activity() { type = "webVisit", date = "01/11/2013 8:15pm" });
             email.Activities = activities;
             email.ExternalActivities = activities;
             email.Send();
@@ -72,9 +67,9 @@ namespace Concierge.Controllers
             email.Company = contact.Company;
             email.EloquaUserID = "1";
             List<Activity> activities = new List<Activity>();
-            activities.Add(new Activity() { ActivityType = "form", TimeStamp = "01/11/2013 4:15pm" });
-            activities.Add(new Activity() { ActivityType = "email", TimeStamp = "01/11/2013 6:15pm" });
-            activities.Add(new Activity() { ActivityType = "website", TimeStamp = "01/11/2013 8:15pm" });
+            activities.Add(new Activity() { type = "formSubmit", date = "01/11/2013 4:15pm" });
+            activities.Add(new Activity() { type = "emailOpen", date = "01/11/2013 6:15pm" });
+            activities.Add(new Activity() { type = "webVisit", date = "01/11/2013 8:15pm" });
             email.Activities = activities;
             email.ExternalActivities = activities;
             email.ContactEmail = contact.EmailAddress;
@@ -102,9 +97,9 @@ namespace Concierge.Controllers
             email.ContactEmail = "donald.ho@oracle.com";
 
             List<Activity> activities = new List<Activity>();
-            activities.Add(new Activity() { ActivityType="form", TimeStamp = "01/11/2013 4:15pm"});
-            activities.Add(new Activity() { ActivityType = "email", TimeStamp = "01/11/2013 6:15pm" });
-            activities.Add(new Activity() { ActivityType = "website", TimeStamp = "01/11/2013 8:15pm" });
+            activities.Add(new Activity() { type = "formSubmit", date = "01/11/2013 4:15pm" });
+            activities.Add(new Activity() { type = "emailOpen", date = "01/11/2013 6:15pm" });
+            activities.Add(new Activity() { type = "webVisit", date = "01/11/2013 8:15pm" });
             email.Activities = activities;
             email.ExternalActivities = activities;
             return View("ProfileHtml", email);

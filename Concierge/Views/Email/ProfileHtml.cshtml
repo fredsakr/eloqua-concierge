@@ -11,18 +11,9 @@ Subject: @Model.Subject
 @* NOTE: There MUST be a blank line after the headers and before the content. *@
 
 <html style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; margin: 0; padding: 0;"><body style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; -webkit-text-size-adjust: none; width: 100% !important; height: 100%; margin: 0; padding: 0;">
-<p style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.6; margin: 0 0 10px; padding: 0;">To: donald.ho@oracle.com
-From: donald.ho@oracle.com
-Subject: As you requested Sir: Donald Ho's Profile
-
-
-
-
-</p>
-    <!-- If you delete this meta tag, the ground will open and swallow you. -->
-    <meta name="viewport" content="width=device-width" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; margin: 0; padding: 0;">
+<!-- If you delete this meta tag, the ground will open and swallow you. -->
+<meta name="viewport" content="width=device-width" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; margin: 0; padding: 0;">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; margin: 0; padding: 0;">
-<title style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; margin: 0; padding: 0;">As you requested Sir: Donald Ho's Profile</title>
 <!-- HEADER --><!-- BODY --><table class="body-wrap" bgcolor="" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; width: 100%; margin: 0; padding: 0;"><tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; margin: 0; padding: 0;">
 <td style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; margin: 0; padding: 0;"></td>
             <td class="container" align="" bgcolor="#FFFFFF" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; display: block !important; max-width: 600px !important; clear: both !important; margin: 0 auto; padding: 0;">
@@ -60,7 +51,7 @@ Subject: As you requested Sir: Donald Ho's Profile
     <ul style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.6; margin: 0 0 10px; padding: 0;">
                                     @foreach (dynamic activity in Model.Activities)
                                     {
-                                        <li style="@activity.GetActivityStyle()">@activity.ActivityType.ToString() <i><small>@activity.TimeStamp</small></i></li>        
+                                        <li style="@activity.GetActivityStyle()">@activity.type.ToString() <i><small>@activity.date</small></i></li>        
                                     }        
     </ul>
 <a href="http://eloqua-concierge.apphb.com/activities/eloqua/1" class="btn" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; color: #FFF; text-decoration: none; font-weight: bold; text-align: center; cursor: pointer; display: block !important; background-image: none !important; background-color: #666; margin: 0 0 10px; padding: 10px 16px;">See all activities</a>
@@ -77,7 +68,7 @@ Subject: As you requested Sir: Donald Ho's Profile
     <ul style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.6; margin: 0 0 10px; padding: 0;">
                                     @foreach (dynamic activity in Model.ExternalActivities)
                                     {
-                                        <li style="@activity.GetActivityStyle()">@activity.ActivityType.ToString() <i><small>@activity.TimeStamp</small></i></li>        
+                                        <li style="@activity.GetActivityStyle()">@activity.type.ToString() <i><small>@activity.date</small></i></li>        
                                     }             
     </ul>
 <a href="http://eloqua-concierge.apphb.com/activities/external/1" class="btn" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; color: #FFF; text-decoration: none; font-weight: bold; text-align: center; cursor: pointer; display: block !important; background-image: none !important; background-color: #666; margin: 0 0 10px; padding: 10px 16px;">See all activities</a>

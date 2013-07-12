@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Web.Mvc;
 using Concierge.Infrastructure;
+using Concierge.Models;
 using Postal;
 
 namespace Concierge.Controllers
@@ -47,8 +48,12 @@ namespace Concierge.Controllers
             email.Title = contact.Title;
             email.Company = contact.Company;
             email.EloquaUserID = "1";
-            email.Activities = "";
-            email.ExternalActivities = "";
+            List<Activity> activities = new List<Activity>();
+            activities.Add(new Activity() { type = "formSubmit", date = "01/11/2013 4:15pm" });
+            activities.Add(new Activity() { type = "emailOpen", date = "01/11/2013 6:15pm" });
+            activities.Add(new Activity() { type = "webVisit", date = "01/11/2013 8:15pm" });
+            email.Activities = activities;
+            email.ExternalActivities = activities;
             email.ContactEmail = contact.EmailAddress;
 
             email.Send();
