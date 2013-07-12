@@ -1,4 +1,3 @@
-C:\Development\Eloqua\Concierge\eloqua-concierge\Concierge\obj\Debug\Concierge.csprojResolveAssemblyReference.cache
 C:\Development\Eloqua\Concierge\eloqua-concierge\Concierge\obj\Debug\Concierge.dll
 C:\Development\Eloqua\Concierge\eloqua-concierge\Concierge\bin\Concierge.dll
 C:\Development\Eloqua\Concierge\eloqua-concierge\Concierge\bin\Concierge.pdb
