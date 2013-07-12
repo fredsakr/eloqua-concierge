@@ -210,6 +210,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ConciergeController.cs" />
     <Compile Include="Controllers\ConciergeRequestController.cs" />
+    <Compile Include="Controllers\AdToCampaignController.cs" />
     <Compile Include="Controllers\EmailController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PopulateContactController.cs" />
@@ -301,6 +302,12 @@
     <Content Include="Images\form-s.png" />
     <Content Include="Images\star-s.png" />
     <Content Include="Images\website-s.png" />
+    <Content Include="Scripts\bootstrap\bootstrap-responsive.css" />
+    <Content Include="Scripts\bootstrap\bootstrap-responsive.min.css" />
+    <Content Include="Scripts\bootstrap\bootstrap.css" />
+    <Content Include="Scripts\bootstrap\bootstrap.js" />
+    <Content Include="Scripts\bootstrap\bootstrap.min.css" />
+    <Content Include="Scripts\bootstrap\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -366,6 +373,7 @@
     <Content Include="Views\Emails\_ViewStart.cshtml" />
     <Content Include="Views\Email\ProfileHtml.cshtml" />
     <Content Include="Views\Emails\TestEmail.cshtml" />
+    <Content Include="Views\AdToCampaign\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
