@@ -39,7 +39,7 @@ namespace Concierge.Controllers
             email.FirstName = contact.FirstName;
             email.LastName = contact.LastName;
             email.To = fromName;
-            email.From = fromName;
+            email.From = "Eloqua Concierge <2d45d69c6e88473e833c@cloudmailin.net>";
             email.ReplySubject = "Profile for:" + email.FirstName + " " + email.LastName;
             email.Subject = "As you requested Sir: " + email.FirstName + " " + email.LastName + "'s Profile";
             email.ProfileScore = 4;
