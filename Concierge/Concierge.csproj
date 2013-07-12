@@ -215,6 +215,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PopulateContactController.cs" />
     <Compile Include="Controllers\SampleController.cs" />
+    <Compile Include="Controllers\SubscribeToNotificationController.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -226,6 +227,7 @@
     <Compile Include="Infrastructure\DataAccess.cs" />
     <Compile Include="Infrastructure\EmailHelper.cs" />
     <Compile Include="Infrastructure\JsonSerializer.cs" />
+    <Compile Include="Controllers\SendEmailController.cs" />
     <Compile Include="Infrastructure\UnixEpochHelper.cs" />
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\Activity.cs" />
@@ -303,8 +305,16 @@
     <Content Include="Images\form-s.png" />
     <Content Include="Images\star-s.png" />
     <Content Include="Images\website-s.png" />
+    <Content Include="Scripts\bootstrap\bootstrap-alert.js" />
+    <Content Include="Scripts\bootstrap\bootstrap-collapse.js" />
+    <Content Include="Scripts\bootstrap\bootstrap-dropdown.js" />
+    <Content Include="Scripts\bootstrap\bootstrap-modal.js" />
+    <Content Include="Scripts\bootstrap\bootstrap-popover.js" />
     <Content Include="Scripts\bootstrap\bootstrap-responsive.css" />
     <Content Include="Scripts\bootstrap\bootstrap-responsive.min.css" />
+    <Content Include="Scripts\bootstrap\bootstrap-tab.js" />
+    <Content Include="Scripts\bootstrap\bootstrap-tooltip.js" />
+    <Content Include="Scripts\bootstrap\bootstrap-typeahead.js" />
     <Content Include="Scripts\bootstrap\bootstrap.css" />
     <Content Include="Scripts\bootstrap\bootstrap.js" />
     <Content Include="Scripts\bootstrap\bootstrap.min.css" />
@@ -375,6 +385,8 @@
     <Content Include="Views\Email\ProfileHtml.cshtml" />
     <Content Include="Views\Emails\TestEmail.cshtml" />
     <Content Include="Views\AdToCampaign\Index.cshtml" />
+    <Content Include="Views\SendEmail\Index.cshtml" />
+    <Content Include="Views\SubscribeToNotification\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
