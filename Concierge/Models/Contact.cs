@@ -31,6 +31,9 @@ namespace Concierge.Models
         public List<Activity> Activities;
 
         [DataMember]
+        public List<Activity> ExternalActivities;
+
+        [DataMember]
         public string ProfileScore;
 
         [DataMember]
