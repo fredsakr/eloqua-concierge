@@ -25,7 +25,7 @@ namespace Concierge.Controllers
             email.FirstName = "Donald";
             email.LastName = "Ho";
             email.To = "donald.ho@oracle.com";
-            email.From = "donald.ho@oracle.com";
+            email.From = "Testing Name <donald.ho@oracle.com>";
             email.ReplySubject = "Profile for " + email.FirstName + " " + email.LastName;
             email.Subject = "As you requested " + email.FirstName + " " + email.LastName + "'s Profile";
             email.ProfileScore = 4;
